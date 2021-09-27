@@ -4,7 +4,12 @@ import Resume from "./Resume";
 
 class Main extends Component {
   render() {
-    return <Resume/>;
+    return (
+      <div className="resume-wrapper">
+        <Resume/>
+      </div>
+    )
+    ;
   }
 }
 

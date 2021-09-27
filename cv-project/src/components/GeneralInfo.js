@@ -27,14 +27,6 @@ class GeneralInfo extends Component {
         }))
     }
 
-/*     submitChanges = () => {
-      console.log('ola')
-      console.log(this.inputName.current.value)
-      this.setState({
-        name: this.inputName.current.value
-      })
-    } */
-
   render() {
     const { profilePhoto, linkedin, email, phoneNumber, address, edit } = this.state;
     return (

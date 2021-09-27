@@ -6,16 +6,27 @@ import OverviewExperience from "./OverviewExperience";
 const Experience = () => {
     
     const [experience, setExperience] = useState([{
-        position: 'Analyst',
-        companyName: 'Banco Nacion',
-        mainTasks: 'Tareas de mantenimiento de oficina',
-        dateFrom: '2015',
-        dateUntil: 'Present',
+        position: 'Senior Developer',
+        city: 'San Diego, USA',
+        companyName: 'Google',
+        mainTasks: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        dateFrom: 'NOV 2015',
+        dateUntil: 'DEC 2020',
         id: uniqid (),
         },
+        {
+        position: 'Junior Developer',
+        city: 'Los Angeles, USA',
+        companyName: 'Facebook',
+        mainTasks: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        dateFrom: 'JUL 2010',
+        dateUntil: 'SEP 2014',
+        id: uniqid (),
+        }
     ])
     const [newExperience, setNewExperience] = useState({
         position: '',
+        city: '',
         companyName: '',
         mainTasks: '',
         dateFrom: '',
@@ -60,34 +71,45 @@ const Experience = () => {
       <div id="experience">
         <h1>Experience</h1>
         <button
+                id="add-new-exp-button"
                 type="button"
                 onClick={()=>{toggleEdit();}}
             > Add New Experience
         </button>
 
         {edit && 
-        <form>
+        <form className="edit-form add-experience">
             <label  htmlFor="position">Position Name</label>
             <input
-                id="position"
                 name="position"
+                placeholder="Position"
                 type="text"
                 defaultValue=''
                 onChange={handleChange }
+            />
+            <label  htmlFor="city">City Name</label>
+            <input
                 
+                name="city"
+                placeholder="City Name"
+                type="text"
+                defaultValue=''
+                onChange={handleChange}
             />
             <label  htmlFor="companyName">Company Name</label>
             <input
-                id="companyName"
+                
                 name="companyName"
+                placeholder="Company Name"
                 type="text"
                 defaultValue=''
                 onChange={handleChange}
             />
             <label  htmlFor="mainTasks">Main Tasks</label>
             <input
-                id="mainTasks"
+                
                 name="mainTasks"
+                placeholder="Main Tasks"
                 type="text"
                 defaultValue=''
                 onChange={handleChange}
@@ -96,6 +118,7 @@ const Experience = () => {
             <input
                 id="dateFrom"
                 name="dateFrom"
+                placeholder="Month Year"
                 type="text"
                 defaultValue=''
                 onChange={handleChange}
@@ -105,19 +128,22 @@ const Experience = () => {
                 id="dateUntil"
                 name="dateUntil"
                 type="text"
+                placeholder="Month Year"
                 defaultValue=''
                 onChange={handleChange}
             />
-            <button
-                onClick = {()=> {handleAddExperience(); toggleEdit();}}
-                type="button"
-            > Add Experience
-            </button>
-            <button
-                type="button"
-                onClick={toggleEdit}
-            > Close
-            </button>
+            <div className="buttons">
+                <button
+                    onClick = {()=> {handleAddExperience(); toggleEdit();}}
+                    type="button"
+                > Add Experience
+                </button>
+                <button
+                    type="button"
+                    onClick={toggleEdit}
+                > Close
+                </button>
+            </div>
         </form>
         }
         <OverviewExperience experience={experience} deleteExperience={deleteExperience}/>

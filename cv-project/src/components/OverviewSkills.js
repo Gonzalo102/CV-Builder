@@ -21,7 +21,7 @@ const OverviewSkills = (props) => {
             <div key={skill.id}>
                 <li >{skill.text}</li>
                 <button onClick={() => deleteSkill(skill.id)}>Delete Skill</button>
-                <button onClick={() => {toggleEdit(); setIndex(i);}}>Edit Task</button> 
+                <button onClick={() => {toggleEdit(); setIndex(i);}}>Edit Skill</button> 
             </div>
         );
       })}

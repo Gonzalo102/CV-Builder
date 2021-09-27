@@ -11,14 +11,21 @@ const OverviewExperience = (props) => {
     <ul>
       {experience.map((expitem, i) => {
         return (
-            <div key={expitem.id} > Experience Number {i+1}
-                <li> {expitem.position}</li>
-                <li> {expitem.companyName}</li>
-                <li> {expitem.mainTasks}</li>
-                <li> {expitem.dateFrom}</li>
-                <li> {expitem.dateUntil}</li>
-                <button onClick={() => deleteExperience(expitem.id)}>Delete Experience</button>
+            <>
+            <div className="experience-wrapper" key={expitem.id} >
+                <div>
+                    <li id="date-from-until"> {expitem.dateFrom} - {expitem.dateUntil}</li>
+                    <li id="position"> {expitem.position}</li>
+                </div>
+                <div className="company-wrapper">
+                    <li id="companyName"> {expitem.companyName}</li>
+                    <li id="city"> {expitem.city}</li>
+                    <li id="mainTasks"> {expitem.mainTasks}</li>
+                </div>
+                <button className="x-button" onClick={() => deleteExperience(expitem.id)}>x</button>
             </div>
+            
+            </>
         );
       })}
     </ul>
