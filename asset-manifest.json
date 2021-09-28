@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/CV-Builder/static/css/main.0922d45b.chunk.css",
+    "main.js": "/CV-Builder/static/js/main.1a8543ea.chunk.js",
+    "main.js.map": "/CV-Builder/static/js/main.1a8543ea.chunk.js.map",
+    "runtime-main.js": "/CV-Builder/static/js/runtime-main.a71924c1.js",
+    "runtime-main.js.map": "/CV-Builder/static/js/runtime-main.a71924c1.js.map",
+    "static/js/2.2dd7f79a.chunk.js": "/CV-Builder/static/js/2.2dd7f79a.chunk.js",
+    "static/js/2.2dd7f79a.chunk.js.map": "/CV-Builder/static/js/2.2dd7f79a.chunk.js.map",
+    "index.html": "/CV-Builder/index.html",
+    "static/css/main.0922d45b.chunk.css.map": "/CV-Builder/static/css/main.0922d45b.chunk.css.map",
+    "static/js/2.2dd7f79a.chunk.js.LICENSE.txt": "/CV-Builder/static/js/2.2dd7f79a.chunk.js.LICENSE.txt",
+    "static/media/delete.1a39986a.svg": "/CV-Builder/static/media/delete.1a39986a.svg",
+    "static/media/edit.3c70b537.svg": "/CV-Builder/static/media/edit.3c70b537.svg",
+    "static/media/profilePicture.9cbf35ca.jpg": "/CV-Builder/static/media/profilePicture.9cbf35ca.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a71924c1.js",
+    "static/js/2.2dd7f79a.chunk.js",
+    "static/css/main.0922d45b.chunk.css",
+    "static/js/main.1a8543ea.chunk.js"
+  ]
+}
