@@ -4,7 +4,9 @@ import React, { Component } from "react";
 
 class Footer extends Component {
   render() {
-    return <div>Footer File</div>;
+    return (
+      <div className="footer">Good Luck on your interview!</div>
+    )
   }
 }
 

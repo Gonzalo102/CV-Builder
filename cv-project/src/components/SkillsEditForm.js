@@ -4,18 +4,21 @@ const SkillsEditForm = (props) => {
   const {index, skill, onSubmitEdit, handleEditChange, toggleEdit} = props;
 
     return(
-            <form onSubmit={(e)=>{onSubmitEdit(e, index); toggleEdit()}}>
-                {console.log('rendering EditForm')
-                }
-                <label>Skill</label>
-                <input 
-                type="text"
-                value={skill.text}
-                onChange={handleEditChange}
-                id="editSkillInput"
-                />
-                <button type="submit">Submit Task</button>
-            </form>
+            <div className="skill-edit-form">
+              <form  onSubmit={(e)=>{onSubmitEdit(e, index); toggleEdit()}}>
+                  {console.log('rendering EditForm')
+                  }
+                  <input 
+                  type="text"
+                  value={skill.text}
+                  placeholder= "Edit your skill here"
+                  onChange={handleEditChange}
+                  id="editSkillInput"
+                  />
+                  <button type="submit">Submit Task</button>
+              </form>
+              <button onClick={toggleEdit} type="button">Close </button>
+            </div>
     )
 }
 

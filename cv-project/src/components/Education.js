@@ -1,34 +1,24 @@
-
 import React, { useEffect, useState } from "react";
 import uniqid from "uniqid";
-import OverviewExperience from "./OverviewExperience";
+import OverviewEducation from "./OverviewEducation";
 
-const Experience = () => {
+const Education = () => {
     
-    const [experience, setExperience] = useState([{
-        position: 'Senior Developer',
-        city: 'San Diego, USA',
-        companyName: 'Google',
-        mainTasks: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    const [education, setEducation] = useState([{
+        career: 'Web Design',
+        city: 'San Francisco, USA',
+        school: 'University of Buenos Aires',
+        calificationAvg: '9.5',
         dateFrom: 'NOV 2015',
         dateUntil: 'DEC 2020',
         id: uniqid (),
         },
-        {
-        position: 'Junior Developer',
-        city: 'Los Angeles, USA',
-        companyName: 'Facebook',
-        mainTasks: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        dateFrom: 'JUL 2010',
-        dateUntil: 'SEP 2014',
-        id: uniqid (),
-        }
     ])
-    const [newExperience, setNewExperience] = useState({
-        position: '',
+    const [newEducation, setNewEducation] = useState({
+        career: '',
         city: '',
-        companyName: '',
-        mainTasks: '',
+        school: '',
+        calificationAvg: '',
         dateFrom: '',
         dateUntil: '',
         id: uniqid (),
@@ -41,82 +31,79 @@ const Experience = () => {
 
     const handleChange = (e) => {
         const {name, value} = e.target
-        setNewExperience((prevState) => (
+        setNewEducation((prevState) => (
             {...prevState, [name]: value,
             id: uniqid (),
             }
         ))
     } 
     
-    const handleAddExperience = ()=> {
-        setExperience(experience => [...experience, newExperience])
+    const handleAddEducation = ()=> {
+        setEducation(education => [...education, newEducation])
     }
 
-    const deleteExperience = (id) => {
+    const deleteEducation = (id) => {
         console.log(id)
-        setExperience(() => {
-            const newExperience = experience.filter((expitem) => expitem.id !== id)
-            console.log('newskills array: ', newExperience)
-            setExperience(newExperience)
+        setEducation(() => {
+            const newEducation = education.filter((editem) => editem.id !== id)
+            console.log('neweducation array: ', newEducation)
+            setEducation(newEducation)
         })
     }
 
     useEffect(()=>{
-        console.log(experience)
-        const i = experience.length
-        console.log('experience lengt: ' , i)
+        console.log(education)
+        const i = education.length
+        console.log('education lengt: ' , i)
     })
 
     return (
-      <div id="experience">
-        <h1 className="main-title" >Experience</h1>
+      <div id="education">
+        <h1 className="main-title" >Education</h1>
         <button
-                id="add-new-exp-button"
+                id="add-new-edu-button"
                 type="button"
                 onClick={()=>{toggleEdit();}}
-            > Add New Experience
+            > Add New Education
         </button>
 
         {edit && 
-        <form className="edit-form add-experience">
-            <label  htmlFor="position">Position Name</label>
+        <form className="edit-form add-education">
+            <label  htmlFor="career">Career Name</label>
             <input
-                name="position"
-                placeholder="Position"
+                name="career"
+                placeholder="Career"
                 type="text"
                 defaultValue=''
                 onChange={handleChange }
             />
             <label  htmlFor="city">City Name</label>
             <input
-                
                 name="city"
                 placeholder="City Name"
                 type="text"
                 defaultValue=''
                 onChange={handleChange}
             />
-            <label  htmlFor="companyName">Company Name</label>
+            <label  htmlFor="school">School Name</label>
             <input
-                
-                name="companyName"
-                placeholder="Company Name"
+                name="school"
+                placeholder="School Name"
                 type="text"
                 defaultValue=''
                 onChange={handleChange}
             />
-            <label  htmlFor="mainTasks">Main Tasks</label>
+            <label  htmlFor="calificationAvg">Average Calification</label>
             <input
                 
-                name="mainTasks"
-                placeholder="Main Tasks"
+                name="calificationAvg"
+                placeholder="Average Calification"
                 type="text"
                 defaultValue=''
                 onChange={handleChange}
             />
             <label  htmlFor="dateFrom">Date From</label>
             <input
-                id="dateFrom"
                 name="dateFrom"
                 placeholder="Month Year"
                 type="text"
@@ -125,7 +112,6 @@ const Experience = () => {
             />
             <label  htmlFor="dateUntil">Date Until</label>
             <input
-                id="dateUntil"
                 name="dateUntil"
                 type="text"
                 placeholder="Month Year"
@@ -134,9 +120,9 @@ const Experience = () => {
             />
             <div className="buttons">
                 <button
-                    onClick = {()=> {handleAddExperience(); toggleEdit();}}
+                    onClick = {()=> {handleAddEducation(); toggleEdit();}}
                     type="button"
-                > Add Experience
+                > Add Education
                 </button>
                 <button
                     type="button"
@@ -146,9 +132,9 @@ const Experience = () => {
             </div>
         </form>
         }
-        <OverviewExperience experience={experience} deleteExperience={deleteExperience}/>
+        <OverviewEducation education={education} deleteEducation={deleteEducation}/>
       </div>
     );
   };
   
-  export default Experience;
+  export default Education;

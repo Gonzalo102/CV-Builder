@@ -13,7 +13,7 @@ const Skills = ()=>{
     )
 
     const [skills, setSkills] = useState([{
-        text: 'Javascript - Intermidiate',
+        text: 'Javascript - Intermediate',
         id: uniqid(),
         },
         {
@@ -21,7 +21,7 @@ const Skills = ()=>{
         id: uniqid(),
         },
         {
-        text: 'CSS - Advance',
+        text: 'CSS - Advanced',
         id: uniqid(),
         },
     ])
@@ -87,19 +87,24 @@ const Skills = ()=>{
             <button
                 id="add-new-skill-button"
                  onClick = {toggleEdit}
-            > Add New Skill</button>
+            > Add Skill</button>
             {edit && 
-            <form>
-                <label htmlFor="newskill"> New Skill </label>
+            <form className="new-skill-form">
                 <input
                     id="newskill"
                     type="text"
+                    placeholder="New Skill"
                     value={skill.text}
                     onChange={handleChange}
                 ></input>
-                <button
-                    onClick = {addSkills}
-                > Add Skill </button>
+                <div className="buttons-skill-form">
+                    <button
+                        onClick = {addSkills}
+                    > Add Skill </button>
+                    <button
+                        onClick = {toggleEdit}
+                    > Close </button>
+                </div>
             </form>
             }
             <OverviewSkills skill ={skill} skills={skills} deleteSkill={deleteSkill} handleEditChange={handleEditChange} onSubmitEdit={onSubmitEdit}/>

@@ -26,7 +26,7 @@ const Introduction = (props) => {
         <div className="introduction-wrapper">
             <h1 id="title-name"> {introduction.name} </h1>
             <h2 id="title-title"> {introduction.title} </h2>
-            <h3 id="personal-profile"> Personal Profile </h3>
+            <h4 id="personal-profile"> Personal Profile </h4>
             <p id="personal-profile-text"> {introduction.profileText} </p>
         
              <button

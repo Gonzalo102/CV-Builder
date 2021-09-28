@@ -3,6 +3,7 @@ import Experience from "./Experience";
 import GeneralInfo from "./GeneralInfo";
 import Skills from "./Skills";
 import Introduction from "./Introduction";
+import Education from "./Education";
 
 class Resume extends Component {
   render() {
@@ -15,7 +16,7 @@ class Resume extends Component {
         <main>
           <Introduction/>
           <Experience/>
-          Education
+          <Education/>
         </main>
       </div>
     )

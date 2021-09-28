@@ -3,13 +3,14 @@ import locationLogo from "../images/location3.png"
 import mailLogo from "../images/mail.png"
 import linkedinLogo from "../images/linkedin.png"
 import phoneLogo from "../images/phone.png"
+import profilePicture from "../images/profilePicture.jpg"
 
 class GeneralInfo extends Component {
     constructor() {
         super();
         //this.inputName = React.createRef();
         this.state = {
-          profilePhoto: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU",
+          profilePhoto: profilePicture,
           linkedin: 'gonzalotrucco',
           email: 'gonzalo.trucco@gmail.com',
           phoneNumber: '027-670-555',
