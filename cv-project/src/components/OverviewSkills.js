@@ -15,13 +15,15 @@ const OverviewSkills = (props) => {
       
     <>
     {console.log('rendering OverviewSkills')}
-    <ul>
+    <ul className="skills-wrapper-items">
       {skills.map((skill, i) => {
         return (
             <div key={skill.id}>
                 <li >{skill.text}</li>
-                <button onClick={() => deleteSkill(skill.id)}>Delete Skill</button>
-                <button onClick={() => {toggleEdit(); setIndex(i);}}>Edit Skill</button> 
+                <div className="skill-buttons">
+                  <button onClick={() => deleteSkill(skill.id)}>Delete Skill</button>
+                  <button onClick={() => {toggleEdit(); setIndex(i);}}>Edit Skill</button> 
+                </div>
             </div>
         );
       })}

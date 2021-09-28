@@ -8,8 +8,51 @@ body{
     margin-right:auto;
     margin-left:auto;
     border: 1px solid black;
+    box-shadow: 17px 10px 65px -38px rgba(0,0,0,0.75);
 }
 
+.left-panel{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(51,83,132);
+    color: rgb(243,245,248);
+}
+
+.left-panel .aside-title{
+    align-self: flex-start;
+    margin-left: 10px;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: .1em;
+}
+
+.skills-wrapper:hover #add-new-skill-button{
+    opacity: 1;
+    margin: 0 auto;
+    display: block;
+}
+
+.skills-wrapper-items{
+
+    display: block;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+#add-new-skill-button{
+    opacity: 0;
+}
+
+.skills-wrapper-items:hover .skill-buttons{
+    opacity: 1;
+}
+
+.skill-buttons{
+    opacity: 0;
+}
 
 #experience{
     background-color: whitesmoke;
@@ -23,11 +66,10 @@ body{
 }
 
 #general-info{
-    background-color: rgb(51,83,132);
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgb(243,245,248);
+
 }
 
 #resume{
@@ -38,6 +80,7 @@ body{
 #locationLogo{
     width: 20px;
     height: 20px;
+    margin-right: 5px;
 }
 
 .info-wrapper{
@@ -67,6 +110,20 @@ body{
     border: 1px solid black;
 }
 
+.intro-form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 250px;
+    top: 20px;
+    background-color: rgb(16, 41, 78);
+    color: white;
+    width: 200px;
+    line-height: 1.8;
+    padding: 20px;
+    border: 1px solid black;
+}
+
 #generalinfo-edit #close-edit-info-button{
     width: 50px;
     align-self: center;
@@ -75,6 +132,13 @@ body{
 
 #edit-info-button{
     position: absolute;
+    top: 310px;
+    left: 350px;
+    opacity: 0;
+}
+
+#general-info:hover #edit-info-button{
+    opacity: 1;
 }
 
 .edit-form{
@@ -88,7 +152,7 @@ body{
     background-color: black;
     color: white;
     padding: 20px;
-    line-height: 1.8;;
+    line-height: 1.8;
 }
 
 .buttons{
@@ -157,10 +221,38 @@ ul li{
     opacity: 1;
 }
 
-#add-new-exp-button{
+#add-new-exp-button, #edit-intro{
     opacity: 0;
 }
 
 #experience:hover #add-new-exp-button{
+    opacity: 1;
+}
+
+#title-name{
+    font-family: questa-grande,serif;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(51,83,132);
+    letter-spacing: .1em;
+}
+
+#title-title, #personal-profile{
+    font-family: questa-grande,serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(51,83,132);
+}
+
+#personal-profile-text{
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.introduction-wrapper{
+    margin-left: 40px;
+}
+
+.introduction-wrapper:hover #edit-intro{
     opacity: 1;
 }

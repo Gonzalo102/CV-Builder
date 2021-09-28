@@ -2,17 +2,18 @@ import React, { Component } from "react";
 import Experience from "./Experience";
 import GeneralInfo from "./GeneralInfo";
 import Skills from "./Skills";
+import Introduction from "./Introduction";
 
 class Resume extends Component {
   render() {
     return (
       <div id="resume">
-        <aside>
+        <aside className="left-panel">
           <GeneralInfo/>
           <Skills/>
         </aside>
         <main>
-          Intro
+          <Introduction/>
           <Experience/>
           Education
         </main>

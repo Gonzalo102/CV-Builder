@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import locationLogo from "../images/location.png"
+import locationLogo from "../images/location3.png"
+import mailLogo from "../images/mail.png"
+import linkedinLogo from "../images/linkedin.png"
+import phoneLogo from "../images/phone.png"
 
 class GeneralInfo extends Component {
     constructor() {
@@ -33,22 +36,22 @@ class GeneralInfo extends Component {
         <div id="general-info">
             <img id="profile-photo" src={profilePhoto} alt="profile"/>
             
-            <h1>Contact</h1>
+            <h1 className="aside-title">Contact</h1>
             <div className="general-info-wrapper">
               <div className="info-wrapper">
                   <img id="locationLogo" src={locationLogo} alt="logo"/>
                   <p>{address}</p>
               </div>
               <div className="info-wrapper">
-                  <img id="locationLogo" src={locationLogo} alt="logo"/>
+                  <img id="locationLogo" src={linkedinLogo} alt="logo"/>
                   <p>{linkedin}</p>
               </div>
               <div className="info-wrapper">
-                  <img id="locationLogo" src={locationLogo} alt="logo"/>
+                  <img id="locationLogo" src={mailLogo} alt="logo"/>
                   <p>{email}</p>
               </div>
               <div className="info-wrapper">
-                  <img id="locationLogo" src={locationLogo} alt="logo"/>
+                  <img id="locationLogo" src={phoneLogo} alt="logo"/>
                   <p>{phoneNumber}</p>
             </div>
             </div>

@@ -82,8 +82,10 @@ const Skills = ()=>{
     })
 
     return (
-        <div>
+        <div className="skills-wrapper">
+            <h1 className="aside-title">Skills</h1>
             <button
+                id="add-new-skill-button"
                  onClick = {toggleEdit}
             > Add New Skill</button>
             {edit && 
