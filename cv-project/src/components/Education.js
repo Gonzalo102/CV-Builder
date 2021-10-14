@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import uniqid from "uniqid";
 import OverviewEducation from "./OverviewEducation";
 
@@ -43,19 +43,12 @@ const Education = () => {
     }
 
     const deleteEducation = (id) => {
-        console.log(id)
         setEducation(() => {
             const newEducation = education.filter((editem) => editem.id !== id)
-            console.log('neweducation array: ', newEducation)
             setEducation(newEducation)
         })
     }
 
-    useEffect(()=>{
-        console.log(education)
-        const i = education.length
-        console.log('education lengt: ' , i)
-    })
 
     return (
       <div id="education">

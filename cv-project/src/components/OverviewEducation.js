@@ -7,7 +7,6 @@ const OverviewEducation = (props) => {
     return (
         
       <>
-      {console.log('rendering OverviewExperience')}
       <ul>
         {education.map((editem, i) => {
           return (

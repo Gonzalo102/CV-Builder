@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import uniqid from "uniqid";
 import OverviewExperience from "./OverviewExperience";
 
@@ -53,19 +53,11 @@ const Experience = () => {
     }
 
     const deleteExperience = (id) => {
-        console.log(id)
         setExperience(() => {
             const newExperience = experience.filter((expitem) => expitem.id !== id)
-            console.log('newskills array: ', newExperience)
             setExperience(newExperience)
         })
     }
-
-    useEffect(()=>{
-        console.log(experience)
-        const i = experience.length
-        console.log('experience lengt: ' , i)
-    })
 
     return (
       <div id="experience">

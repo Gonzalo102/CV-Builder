@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import uniqid from "uniqid";
 import OverviewSkills from "./OverviewSkills";
 
@@ -28,7 +28,6 @@ const Skills = ()=>{
 
     const toggleEdit = () => {
         setEdit(!edit)
-        console.log('edit in Skills: ', edit)
       }
 
     const handleChange = (e) => {
@@ -49,10 +48,8 @@ const Skills = ()=>{
     }
     
     const deleteSkill = (id) => {
-        console.log(id)
         setSkills(() => {
             const newSkills = skills.filter((skill) => skill.id !== id)
-            console.log('newskills array: ', newSkills)
             setSkills(newSkills)
         })
     }
@@ -75,11 +72,6 @@ const Skills = ()=>{
           }
         })
     }
-
-    useEffect(()=>{
-        console.log(skill)
-        console.log('skills array:', skills)
-    })
 
     return (
         <div className="skills-wrapper">

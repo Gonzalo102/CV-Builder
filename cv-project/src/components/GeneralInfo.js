@@ -8,7 +8,6 @@ import profilePicture from "../images/profilePicture.jpg"
 class GeneralInfo extends Component {
     constructor() {
         super();
-        //this.inputName = React.createRef();
         this.state = {
           profilePhoto: profilePicture,
           linkedin: 'gonzalotrucco',
@@ -73,7 +72,6 @@ class GeneralInfo extends Component {
                             name = "address"
                             type="text"
                             defaultValue={address}
-                            //ref={this.inputName}
                             onChange={this.handleChange}
                         />
                         <label htmlFor="linkedin">Lnkedin</label>
@@ -82,7 +80,6 @@ class GeneralInfo extends Component {
                             name = "linkedin"
                             type="text"
                             defaultValue={linkedin}
-                            //ref={this.inputName}
                             onChange={this.handleChange}
                         />
                         <label htmlFor="email">Email</label>
@@ -101,12 +98,6 @@ class GeneralInfo extends Component {
                             value={phoneNumber}
                             onChange={this.handleChange}
                         />
-{/*                         <button
-                            type="button"
-                            onClick={this.submitChanges}
-                        >
-                            Edit Experience
-                        </button> */}
                         <button
                             id="close-edit-info-button"
                             type="button"

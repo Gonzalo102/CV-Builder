@@ -16,7 +16,6 @@ const OverviewSkills = (props) => {
   return (
       
     <>
-    {console.log('rendering OverviewSkills')}
     <ul className="skills-wrapper-items">
       {skills.map((skill, i) => {
         return (

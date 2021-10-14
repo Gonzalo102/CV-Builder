@@ -1,18 +1,16 @@
 import React from "react";
 
-
 const OverviewExperience = (props) => {
   const { experience, deleteExperience } = props;
 
   return (
       
     <>
-    {console.log('rendering OverviewExperience')}
     <ul>
       {experience.map((expitem, i) => {
         return (
             <>
-            <div className="experience-wrapper" key={expitem.id} >
+            <div key={expitem.id} className="experience-wrapper" >
                 <div>
                     <li id="date-from-until"> {expitem.dateFrom} - {expitem.dateUntil}</li>
                     <li id="position"> {expitem.position}</li>

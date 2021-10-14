@@ -6,8 +6,6 @@ const SkillsEditForm = (props) => {
     return(
             <div className="skill-edit-form">
               <form  onSubmit={(e)=>{onSubmitEdit(e, index); toggleEdit()}}>
-                  {console.log('rendering EditForm')
-                  }
                   <input 
                   type="text"
                   value={skill.text}
