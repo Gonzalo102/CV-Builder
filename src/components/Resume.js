@@ -10,16 +10,16 @@ class Resume extends Component {
     return (
       <div id="resume">
         <aside className="left-panel">
-          <GeneralInfo/>
-          <Skills/>
+          <GeneralInfo />
+          <Skills />
         </aside>
         <main>
-          <Introduction/>
-          <Experience/>
-          <Education/>
+          <Introduction />
+          <Experience />
+          <Education />
         </main>
       </div>
-    )
+    );
   }
 }
 
